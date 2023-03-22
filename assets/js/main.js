@@ -53,7 +53,7 @@ const membersTeam = [
 
 for(let i = 0; i < membersTeam.length; i++) {
     const member = membersTeam[i]
-    const data = member.name + member.role + member.photo
+    const data = member.name + ' ' + member.role + ' ' + member.photo
     console.log(data)
     printToDom(data)
 }
