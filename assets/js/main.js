@@ -53,5 +53,21 @@ const membersTeam = [
 
 for(let i = 0; i < membersTeam.length; i++) {
     const member = membersTeam[i]
-    console.log(member.name, member.role, member.photo)
+    const data = member.name + member.role + member.photo
+    console.log(data)
+    printToDom(data)
+}
+
+//Milestone 2
+/**
+ * @param{string}
+ *  */
+function printToDom(data) {
+    // create element where to put the text
+    const membersData = document.createElement('span')
+    membersData.style.display = 'block'
+    //put membersData into the element
+    membersData.textContent = data
+    //append element to Dom
+    document.querySelector('body').append(membersData)
 }
