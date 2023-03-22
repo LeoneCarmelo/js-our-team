@@ -20,7 +20,7 @@ const membersTeam = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        photo: 'founder-ceo.jpg'
+        photo: 'wayne-barnett-founder-ceo.jpg'
     },
     {
         name: 'Angela Caroll',
@@ -53,9 +53,11 @@ const membersTeam = [
 
 for(let i = 0; i < membersTeam.length; i++) {
     const member = membersTeam[i]
-    const data = member.name + ' ' + member.role + ' ' + member.photo
+    const data = member.name + ' ' + member.role 
+    const photo = member.photo
     console.log(data)
     printToDom(data)
+    stringToPhoto(photo)
 }
 
 //Milestone 2
@@ -70,4 +72,17 @@ function printToDom(data) {
     membersData.textContent = data
     //append element to Dom
     document.querySelector('body').append(membersData)
+}
+
+// Bonus 1
+/**
+ * @param(string)
+ */
+function stringToPhoto(photo) {
+    //create tag img
+    const img = document.createElement('img')
+    //put link of the image inside
+    img.src = `./assets/img/${photo}`
+    //append img to dom
+    document.querySelector('body').append(img)
 }
