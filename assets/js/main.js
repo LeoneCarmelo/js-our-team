@@ -15,7 +15,7 @@ Trasformare la stringa foto in una immagine effettiva
 BONUS 2:
 Organizzare i singoli membri in card/schede
 */
-
+//Add array
 const membersTeam = [
     {
         name: 'Wayne Barnett',
@@ -48,3 +48,10 @@ const membersTeam = [
         photo: 'barbara-ramos-graphic-designer.jpg'
     },
 ]
+
+//Milestone 1
+
+for(let i = 0; i < membersTeam.length; i++) {
+    const member = membersTeam[i]
+    console.log(member.name, member.role, member.photo)
+}
